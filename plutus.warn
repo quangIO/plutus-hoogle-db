@@ -1,0 +1,48 @@
+plutus-contract:2412:failed to parse: class r .! l ≈ a => HasType (l :: Symbol) (a :: k) (r :: Row k)
+plutus-contract:2420:failed to parse: type Empty = 'R '[] :: [LT a]
+plutus-contract:3614:failed to parse: class (Typeable state, Show state, Show (Action state), Eq (Action state), (forall w s e. Eq (ContractInstanceKey state w s e)), (forall w s e. Show (ContractInstanceKey state w s e))) => ContractModel state
+plutus-contract:3616:failed to parse:     -- | The type of actions that are supported by the contract. An action
+plutus-contract:3617:failed to parse:     --   usually represents a single <a>callEndpoint</a> or a transfer of
+plutus-contract:3618:failed to parse:     --   tokens, but it can be anything that can be interpreted in the
+plutus-contract:3619:failed to parse:     --   <a>EmulatorTrace</a> monad.
+plutus-contract:3622:failed to parse:     -- | To be able to call a contract endpoint from a wallet a
+plutus-contract:3623:failed to parse:     --   <a>ContractHandle</a> is required. These are managed by the test
+plutus-contract:3624:failed to parse:     --   framework and all the user needs to do is provide this contract
+plutus-contract:3625:failed to parse:     --   instance key type representing the different contract instances that a
+plutus-contract:3626:failed to parse:     --   test needs to work with, and when creating a property (see
+plutus-contract:3627:failed to parse:     --   <a>propRunActions_</a>) provide a list of contract instance keys
+plutus-contract:3628:failed to parse:     --   together with their wallets and contracts (a
+plutus-contract:3629:failed to parse:     --   <a>ContractInstanceSpec</a>). Contract instance keys are indexed by
+plutus-contract:3630:failed to parse:     --   the observable state, schema, and error type of the contract and
+plutus-contract:3631:failed to parse:     --   should be defined as a GADT. For example, a handle type for a contract
+plutus-contract:3632:failed to parse:     --   with one seller and multiple buyers could look like this.
+plutus-contract:3633:failed to parse:     --   
+plutus-contract:3634:failed to parse:     --   <pre>
+plutus-contract:3635:failed to parse:     --   data ContractInstanceKey MyModel w s e where
+plutus-contract:3636:failed to parse:     --       Buyer  :: Wallet -&gt; ContractInstanceKey MyModel MyObsState MySchema MyError
+plutus-contract:3637:failed to parse:     --       Seller :: ContractInstanceKey MyModel MyObsState MySchema MyError
+plutus-contract:3638:failed to parse:     --   </pre>
+plutus-contract:3640:failed to parse: }
+plutus-contract:3756:failed to parse:     -- | The contract state type of the monad. For both <a>Spec</a> and
+plutus-contract:3757:failed to parse:     --   <a>DL</a> this is simply the <tt>state</tt> parameter of the
+plutus-contract:3758:failed to parse:     --   respective monad.
+plutus-contract:3760:failed to parse: }
+plutus-contract:3944:failed to parse: }
+plutus-core:1425:failed to parse: someValue :: forall a uni. uni `Includes` a => a -> Some (ValueOf uni)
+plutus-core:1509:failed to parse:     -- | A constrant for "<tt>constr a</tt> holds for any <tt>a</tt> from
+plutus-core:1510:failed to parse:     --   <tt>uni</tt>".
+plutus-core:1512:failed to parse: }
+plutus-core:1588:failed to parse: knownUniOf :: uni `Contains` a => proxy a -> uni (Esc a)
+plutus-core:2183:failed to parse: mkTyBuiltin :: forall k (a :: k) uni tyname ann. uni `Contains` a => ann -> Type tyname uni ann
+plutus-core:2450:failed to parse: unit :: uni `Includes` () => Type TyName uni ()
+plutus-core:3499:failed to parse: integer :: uni `Includes` Integer => Type tyname uni ()
+plutus-core:3513:failed to parse: bool :: uni `Includes` Bool => Type TyName uni ()
+plutus-core:3746:failed to parse: TypeSchemeAll :: (KnownSymbol text, KnownNat uniq, KnownKind kind) => Proxy '(text, uniq, kind) -> (forall ot. ot ~ TyVarRep ('TyNameRep @kind text uniq) => Proxy ot -> TypeScheme term args res) -> TypeScheme term args res
+plutus-core:3956:failed to parse:     -- | The <tt>cost</tt> part of <a>BuiltinMeaning</a>.
+plutus-core:3958:failed to parse: }
+plutus-core:4906:failed to parse: someValue :: forall a uni. uni `Includes` a => a -> Some (ValueOf uni)
+plutus-core:4984:failed to parse:     -- | A constrant for "<tt>constr a</tt> holds for any <tt>a</tt> from
+plutus-core:4985:failed to parse:     --   <tt>uni</tt>".
+plutus-core:4987:failed to parse: }
+plutus-core:5003:failed to parse: knownUniOf :: uni `Contains` a => proxy a -> uni (Esc a)
+plutus-tx:1042:failed to parse: instance (TypeError ...) => PlutusTx.IsData.Class.IsData GHC.Types.Int
